@@ -1,0 +1,185 @@
+/* navbar styling */
+* {
+    font-family: "Hammersmith", sans-serif;
+}
+
+li, a, p {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #0B0C10;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+header .name{
+    margin-right: auto;
+    margin-left: 2vh;
+}
+
+header p{
+    font-size: 2vh;
+    font-weight: 800;
+    color: #66FCF1;
+}
+
+header .nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 2vh;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    font-size: 2vh;
+    color: #66FCF1;
+    font-weight: 550;
+}
+
+.nav_links li a:hover{
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.nav_links li a:active{
+    color: red;
+    background-color: red;
+}
+
+/* change color by selected page */
+.nav_links #home-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
+.nav_links #about-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
+.nav_links #projects-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
+/*common to all pages */
+
+body .page-ind {
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    background-color: #747474;
+    font-weight: 600;
+    color: #66FCF1;
+    position: sticky;
+    top: 5vh;
+}
+
+/* home page styling*/
+
+.overall .home-content{
+    background: #66FCF1 url('/images/3d_Portfolio_Logo_v20001.jpg') no-repeat fixed center;
+    background-size: 100% 80%;
+    width: 100vw;
+    height: 80vh;
+    color: #C5C6C7;
+    background-position: 0 15vh;
+}
+
+h1 {
+    font-size: 4vh;
+    font-weight: 1000;
+}
+
+/* about page styling */
+.overall .about-content{
+    width: 100vw;
+    height: 80vh;
+    color: #C5C6C7;
+    border: 2px red solid;
+}
+
+/* project styling */
+.overall .project-content{
+    background-color: rgba(19, 18, 18, .7);
+    width: 100vw;
+    color: #C5C6C7;
+    bottom: 5vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    width: 100vw;
+    height: 80vh;
+    padding: 2vh;
+    text-align: center;
+    padding: 2vw;
+}
+
+.grid-container div {
+    background-color: lightgrey;
+    font-size: 2vh;
+    border-radius: 25px;
+    color: black;
+    border: 5px #0B0C10 solid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container .top-project {
+    border: 0;
+    padding: 1vh;
+    height: 8vh;
+    justify-content: center;
+}
+
+.grid-container .mid-project{
+    flex-grow: 5;
+}
+
+.grid-container .bot-project{
+    border: 0;
+    height: 8vh;
+}
+
+/* footer styling */
+footer{
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    background-color: #0B0C10;
+    color: #66FCF1;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+footer p {
+    text-align: center;
+    line-height: 50px;
+    font-size: 2vh;
+    line-height: 5vh;
+}
+
+
+
+
+
