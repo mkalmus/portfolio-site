@@ -91,7 +91,7 @@ body .page-ind {
 /* home page styling*/
 
 .overall .home-content{
-    background: #66FCF1 url('/Main/imgs/3d_Portfolio_Logo_v20001.jpg') no-repeat fixed center;
+    background: #66FCF1 url('/images/3d_Portfolio_Logo_v20001.jpg') no-repeat fixed center;
     background-size: 100% 80%;
     width: 100vw;
     height: 80vh;
@@ -157,8 +157,13 @@ h1 {
 }
 
 .grid-container .bot-project{
-    border: 0;
+    border: 3px black solid;
     height: 8vh;
+    justify-content: center;
+    width: 10vh;
+    height: 3.5vh;
+    margin: 1vh auto;
+    background-color: lightblue;
 }
 
 /* footer styling */
