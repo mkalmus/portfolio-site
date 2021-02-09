@@ -13,15 +13,16 @@ header {
     top: 0px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0px 3%;
     background-color: #0B0C10;
     height: 5vh;
+    line-height: 5vh;
 }
 
-header.name{
+header .name{
     margin-right: auto;
+    margin-left: 2vh;
 }
 
 header p{
@@ -30,13 +31,15 @@ header p{
     color: #66FCF1;
 }
 
-.nav_links{
+header .nav_links{
     list-style: none;
 }
 
 .nav_links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 2vh;
+    height: 5vh;
+    line-height: 5vh;
 }
 
 .nav_links li a{
@@ -51,36 +54,50 @@ header p{
     color: white;
 }
 
+.nav_links li a:active{
+    color: red;
+    background-color: red;
+}
+
+/* change color by selected page */
+.nav_links #home-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
+.nav_links #about-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
+.nav_links #projects-nav-p a{ 
+    color: white;
+    font-style: italic;
+}
+
 /*common to all pages */
 
 body .page-ind {
-    height: 15vh;
+    height: 10vh;
     text-align: center;
-    line-height: 15vh;
+    line-height: 10vh;
     font-size: 32px;
     background-color: #747474;
     font-weight: 600;
     color: #66FCF1;
+    position: sticky;
+    top: 5vh;
 }
 
 /* home page styling*/
 
 .overall .home-content{
-    background: #66FCF1 url('/Main/imgs/homepage.png') no-repeat fixed center;
-    background-size: cover;
+    background: #66FCF1 url('/Main/imgs/3d_Portfolio_Logo_v20001.jpg') no-repeat fixed center;
+    background-size: 100% 80%;
     width: 100vw;
-    padding: 15px;
     height: 80vh;
     color: #C5C6C7;
-}
-
-img{
-    width: 60%;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
+    background-position: 0 15vh;
 }
 
 h1 {
@@ -97,11 +114,18 @@ div.h1 {
     font-size: 36px;
 }
 
+/* about page styling */
+.overall .about-content{
+    width: 100vw;
+    height: 80vh;
+    color: #C5C6C7;
+    border: 2px red solid;
+}
+
 /* project styling */
 .overall .project-content{
-    background-color: rgba(19, 18, 18, .9);
+    background-color: rgba(19, 18, 18, .7);
     width: 100vw;
-    padding: 15px;
     height: 80vh;
     color: #C5C6C7;
 }
@@ -116,7 +140,7 @@ div.h1 {
 .grid-container {
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
-    grid-template-rows: 20vw 20vw;
+    grid-template-rows: 15vw 15vw;
     grid-gap: 2vw;
     padding: 20px;
     font-size: 30px;
@@ -131,9 +155,10 @@ div.h1 {
     background-color: lightgrey;
     text-align: center;
     padding: 20px;
-    font-size: 25px;
+    font-size: 3vh;
     border-radius: 25px;
     color: black;
+    border: 5px #0B0C10 solid;
 }
 
 
@@ -146,13 +171,13 @@ footer{
     bottom: 0px;
     color: #66FCF1;
     height: 5vh;
+    line-height: 5vh;
 }
 
 footer p {
     text-align: center;
     line-height: 50px;
     font-size: 20px;
-    vertical-align: middle;
     line-height: 5vh;
 }
 
