@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <!-- Include code for favicon image, three stylesheets, Google Font, and responsive meta tags. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <!-- Link the style sheets and Google font -->
-    <link rel="shortcut icon" type="image/png" href="images/pigeon-favicon.svg"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type=image/png>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Michael Kalmus</title>
-</head>
-
-<body>
-
-    <header>
-        <p class="name"> Michael Kalmus</p>
-        <nav class="navbar">
-            <ul class="nav_links">
-                <li id="home-nav-p"><a href="index.html">Home</a></li>
-                <li><a href="about_mk.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  </head>
+  <body>
+    <!-- <a class = "skip" href="#main">Skip to Main Content</a> -->
+    <div class="container">
+      <header>
+        <nav class="box nav-box">
+          <ul class="nav_links">
+            <li class="nav_item"><a id="main" href="index.html">About</a></li>
+            <li class="nav_item"><a href="resume.html">Work</a></li>
+            <li class="nav_item"><a href="projects.html">Projects</a></li>
+            <li class="nav_item"><a href="contact.html">Contact Me</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <div class="page-ind">
-        <h1>Home</h1>
+      <main class="box main-box index-main">
+        <h1>About Me</h1>
+        <p>Hi, I'm Michael! I'm a student looking for a career in
+          web development or data science.
+        </p>
+        <img src="images/headshot_main.jpg" alt="headshot">
+        <p>I hail from a beautiful town in Long Island, New York, but have been 
+          living in Ann Arbor, Michigan for the last 6 years completing my collegiate education. 
+        </p>
+        <p>So far, I've gotten my B.S.E and M.S.E in Industrial and Operations Engineering and 
+          am currently working towards a M.S.I in Information with a concentration in data science.
+        </p>
+      </main>
+
+      <footer class="box footer-box">
+        <p> &copy; Michael Kalmus, 2021 </p>
+      </footer>
     </div>
 
-    <main class="overall">
-        <div class="home-content"></div>
-    </main>
-
-    <footer>
-        <p>Michael Kalmus &copy; 2020</p>
-    </footer>
-
-</body>
+  </body>
 </html>

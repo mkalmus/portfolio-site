@@ -1,85 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <!-- Include code for favicon image, three stylesheets, Google Font, and responsive meta tags. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <!-- Link the style sheets and Google font -->
-    <link rel="shortcut icon" type="image/png" href="images/pigeon-favicon.svg"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <title>Projects</title>
-
-</head>
-
-<body>
-
-    <header>
-        <p class="name"> Michael Kalmus</p>
-        <nav class="navbar">
-            <ul class="nav_links">
-                <li id="home-nav"><a href="index.html">Home</a></li>
-                <li id="about-nav"><a href="about_mk.html">About</a></li>
-                <li id="projects-nav-p"><a href="projects.html">Projects</a></li>
-                <li id="contact-nav"><a href="#contact">Contact</a></li>
-            </ul>
+    <link rel="shortcut icon" href="images/logo_icon.png" type=image/png>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Michael Kalmus</title>
+  </head>
+  <body>
+    <div class="container">
+    <!-- <a class = "skip" href="#main">Skip to Main Content</a> -->
+      <header>
+        <nav class="box nav-box">
+          <ul class="nav_links">
+            <li class="nav_item"><a id="main" href="index.html">About</a></li>
+            <li class="nav_item"><a href="resume.html">Work</a></li>
+            <li class="nav_item"><a href="projects.html">Projects</a></li>
+            <li class="nav_item"><a href="contact.html">Contact Me</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <div class="page-ind">
-        <h1>Projects</h1>
+      <main class="box main-box">
+          <h1 id = "gallery">Recent Projects</h2>
+            <div class="gallery">
+              <img id="image1" src="images/sample.jpg" alt="" />
+              <img id="image2" src="images/sample2.jpg" alt="" />
+              <img id="image3" src="images/sample.jpg" alt="" />
+              <img id="image4" src="images/sample2.jpg" alt="" />
+            </div>
+      </main>
+
+      <footer class="box footer-box">
+        <p> &copy; Michael Kalmus, 2021 </p>
+      </footer>
+
     </div>
 
-    <main class="overall">
-        <div class="project-content">
-            <div class="grid-container">
-                    <div class="item1">
-                        <div class="top-project">This website!</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div>
-
-                    <div class="item2">
-                        <div class="top-project">Baseball Simulation in R</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div>
-
-                    <div class="item3">
-                        <div class="top-project">Machine Learning to Predict Heart Disease</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div> 
-
-                    <div class="item4">
-                        <div class="top-project">Python Tic Tac Toe</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div>
-        
-                    <div class="item5">
-                        <div class="top-project">Using Javascript with 3D Models</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div>
-
-                    <div class="item6">
-                        <div class="top-project">6</div>
-                        <div class="mid-project"></div>
-                        <div class="bot-project">Github</div>
-                    </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer>
-		<p>Michael Kalmus &copy; 2020</p>
-    </footer>
-    <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
