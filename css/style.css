@@ -168,14 +168,20 @@ h2 {
   font-size: 1.5em;
 }
 
-.project-item p{
-  font-size: 110%;
-}
-
 .item-middle{
   flex: 1;
   min-height: 10vh;
   border-bottom: 3px #3d5a80 solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-middle p{
+  padding: 2% 0;
+}
+
+.project-item p{
+  font-size: 110%;
 }
 
 .item-bottom{
