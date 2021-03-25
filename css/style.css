@@ -10,7 +10,7 @@
 
 .box{
   text-align: center;
-  color: #f0efeb;
+  color: #E1DCF9;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -24,29 +24,29 @@
 }
 
 .nav-box {
-  background-color: #3d5a80;
+  background-color: #001D3D;
   padding: 2% 0;
   min-height: 10vh;
 }
 
 .main-box {
-  background-color: #293241;
+  background-color: #001529;
   flex: 1;
-  padding-top: 4%;
-  padding-bottom: 4%;
   justify-content: flex-start;
-  min-height: 70vh;
+  min-height: 74vh;
+  padding: 2% 5%;
 }
 
+
 .footer-box {
-  background-color: #3d5a80;
+  background-color: #001D3D;
   padding: 2% 0;
   min-height: 2.5vh;
 }
 
 /* navbar styling */
   .nav_links a{
-    color: white;
+    color: #E1DCF9;
     text-decoration: none;
     line-height: 1.5em;
   }
@@ -143,6 +143,7 @@ h2 {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  padding: 1% 0;
 }
 
 .project-item{
@@ -152,8 +153,17 @@ h2 {
   border: 3px #3d5a80 solid;
   border-radius: 3px;
   width: 25vh;
-  height: 25vh;
-}  
+  min-height: 25vh;
+  background-color: #001D3D;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+  }
+
+.grow:hover {
+transform: scale(1.1);
+}
 
 .item-top{
   padding: 5%;
@@ -174,6 +184,8 @@ h2 {
   border-bottom: 3px #3d5a80 solid;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 3%;
 }
 
 .item-middle p{
@@ -182,6 +194,10 @@ h2 {
 
 .project-item p{
   font-size: 110%;
+}
+
+.item-middle p.lang-text{
+  font-size: 100%;
 }
 
 .item-bottom{
@@ -194,6 +210,35 @@ h2 {
 .item-middle img{
   height: 5vh;
   width: 100%;
+}
+
+.icon-container{
+  padding: 3% 0;
+}
+
+i{
+  color: tomato;
+  font-size: 250%;
+}
+
+/* skip to main content */
+.skip a{
+  background: white;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  /*Your code here*/
+  position: absolute;
+  top: -50px;
+}
+/*Req 3b*/
+/*Write selector/rule property to position the skip class element*/
+.skip a:focus{
+  position: absolute;
+  top: 10px;
 }
 
 
