@@ -59,8 +59,10 @@
       text-decoration: underline;
     }
 
-  #main{
+  .nav_links #main{
     text-decoration: underline;
+    text-transform: uppercase;
+    color: white;
   }
 
 /* resume page styling */
