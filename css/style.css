@@ -10,7 +10,7 @@
 
 .box{
   text-align: center;
-  color: #E1DCF9;
+  color: #181046;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -24,29 +24,32 @@
 }
 
 .nav-box {
-  background-color: #001D3D;
+  background-color: #3D405B;
   padding: 2% 0;
   min-height: 10vh;
+  border-bottom: 5px #292B3D solid;
 }
 
 .main-box {
-  background-color: #001529;
+  background-color: #eeb9aac0;
   flex: 1;
   justify-content: flex-start;
-  min-height: 74vh;
+  min-height: 73vh;
   padding: 2% 5%;
 }
 
 
 .footer-box {
-  background-color: #001D3D;
+  background-color: #3D405B;
   padding: 2% 0;
   min-height: 2.5vh;
+  color: #F4F1DE;
+  border-top: 5px #292B3D solid;
 }
 
 /* navbar styling */
   .nav_links a{
-    color: #E1DCF9;
+    color: #F4F1DE;
     text-decoration: none;
     line-height: 1.5em;
   }
@@ -62,7 +65,6 @@
   .nav_links #main{
     text-decoration: underline;
     text-transform: uppercase;
-    color: white;
   }
 
 /* resume page styling */
@@ -74,26 +76,25 @@ h3 {
   display: block;
   text-align: center;
   font-weight: 25;
-  line-height: 1.25em;
-  font-size: 100%;
+  font-size: 110%;
 }
 h3 strong {
   display: block;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 h2 {
-  background-color: transparent;
-  color: #98c1d9;
   font-weight: 500;
-  letter-spacing: 0;
   font-size: 150%;
 }
 
-.education, .skills, .experience,
-.experience h3,
-.education li, .skills li{
-  padding-top: 4%;
+.education, .skills, .experience{
+  padding-top: 2%;
+}
+
+.experience *, .education *, .skills *{
+  line-height: 1.2em;
+  text-align: left;
 }
 
 .education li, .skills li, 
@@ -102,16 +103,7 @@ h2 {
   flex-direction: column;
 }
 
-.experience li{
-  padding-top: 0.5em;
-  text-align: left;
-}
-
-.skills li{
-  text-align: left;
-}
-
-.education li{
+.experience li, .skills li, .education li{
   text-align: left;
 }
 
@@ -122,6 +114,9 @@ h2 {
   grid-template-columns: auto auto auto;
   row-gap: 0.5em;
   column-gap: 0.5em;
+  border: 7px #3D405B solid;
+  background-color: #3D405B;
+  border-radius: 1%;
 }
 
 .grid-item:hover{
@@ -156,7 +151,8 @@ h2 {
   border-radius: 3px;
   width: 25vh;
   min-height: 25vh;
-  background-color: #001D3D;
+  background-color: #3D405B;
+  color: #F4F1DE;
 }
 
 .grow {
@@ -190,6 +186,11 @@ transform: scale(1.1);
   padding: 3%;
 }
 
+.item-middle img{
+  width: 2.5em;
+  height: 2.5em;
+}
+
 .item-middle p{
   padding: 2% 0;
 }
@@ -209,18 +210,14 @@ transform: scale(1.1);
   justify-content: center;
 }
 
-.item-middle img{
-  height: 5vh;
-  width: 100%;
-}
-
 .icon-container{
   padding: 3% 0;
 }
 
 i{
-  color: tomato;
+  color: #e07b5f91;
   font-size: 250%;
+  padding: 0 5%;
 }
 
 /* skip to main content */
@@ -231,13 +228,10 @@ i{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-
-  /*Your code here*/
   position: absolute;
   top: -50px;
 }
-/*Req 3b*/
-/*Write selector/rule property to position the skip class element*/
+
 .skip a:focus{
   position: absolute;
   top: 10px;
