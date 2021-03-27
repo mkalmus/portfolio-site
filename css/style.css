@@ -76,16 +76,12 @@ h3 {
   display: block;
   text-align: center;
   font-weight: 25;
-  font-size: 110%;
+  font-size: 105%;
 }
 h3 strong {
   display: block;
-  font-size: 110%;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 150%;
+  font-size: 100%;
+  padding-top: 0.75em;
 }
 
 .education, .skills, .experience{
@@ -105,6 +101,19 @@ h2 {
 
 .experience li, .skills li, .education li{
   text-align: left;
+  padding-top: 0.75em;
+  font-size: 90%;
+}
+
+h2, .experience h2,
+.education h2, .skills h2 {
+  font-weight: 500;
+  font-size: 150%;
+  background-color: #3D405B;
+  color: white;
+  margin-top: 1%;
+  text-align: center;
+  padding: .5% 0;
 }
 
 /* index (main page) formatting */
@@ -235,6 +244,22 @@ i{
 .skip a:focus{
   position: absolute;
   top: 10px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+}
+
+button{
+  width: 50%;
+  align-self: center;
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
 }
 
 
