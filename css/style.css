@@ -42,6 +42,23 @@
   border-top: 5px #292B3D solid;
 }
 
+/* skip to main content */
+.skip a{
+  background: white;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+}
+
+.skip a:focus{
+  position: absolute;
+  top: 10px;
+}
+
 /* navbar styling */
   .nav_links a{
     color: #F4F1DE;
@@ -201,7 +218,7 @@ h3 {
   width: 100%;
 }
 
-/* project page styling */
+/* PROJECT PAGE */
 .gallery{
   display: flex;
   flex-wrap: wrap;
@@ -288,25 +305,14 @@ i{
   padding: 0 5%;
 }
 
-/* skip to main content */
-.skip a{
-  background: white;
-  left: 0;
-  padding: 7px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-  position: absolute;
-  top: -50px;
+.flip-card{
+    width: 40vh;
+    min-height: 60vh;
+    justify-content: center;
+    overflow: scroll;
 }
 
-.skip a:focus{
-  position: absolute;
-  top: 10px;
-}
-
-
-/* contact form styling */
+/* CONTACT FORM */
 
 /* Full-width input fields */
 input[type=text]{
