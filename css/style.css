@@ -65,30 +65,12 @@
 
 /* resume page styling */
 
-  /* resume text */
-  h1 {
-    font-size: 175%;
-  }
-
-  h2{
-    font-size: 150%;
-  }
-
-  h3 {
-    display: block;
-    text-align: center;
-    font-weight: 25;
-    font-size: 105%;
-  }
-  h3 strong {
-    display: block;
-    font-size: 110%;
-  }
-
   .experience li, .skills li, .education li{
     text-align: left;
     font-size: 90%;
   }
+
+/* accordion overall */
 
 .accordion {
   background-color: #3D405B;
@@ -106,18 +88,25 @@
   margin-top: 2%;
 }
 
-.accordion:hover {
-  background-color: #ccc;
-}
+/* collapsed */
 
-.accordion p{
-  font-size: 175%;
-}
+  .accordion:hover {
+    background-color: #ccc;
+  }
 
-.panel h2, .panel h3{
-  text-align: left;
-}
+  .accordion:after {
+    content: "\002B";
+    font-size: 150%;
+    color: #fff;
+  }
 
+  .active:after {
+    content: "\2212";
+    font-size: 150%;
+    color: #fff;
+  }
+
+/* text inside accordions */
 .panel {
   background-color: white;
   max-height: 0;
@@ -126,7 +115,68 @@
 }
 
 .panel-content{
-  padding: 5%;
+  padding: 2% 5% 5% 5%;
+}
+
+.panel h2, .panel h3{
+  text-align: left;
+}
+
+.panel li{
+  padding-top: 2%;
+}
+
+/* panel headers */
+h1 {
+  font-size: 175%;
+}
+
+h2{
+  font-size: 125%;
+}
+
+h3 {
+  display: block;
+  text-align: center;
+  font-weight: 25;
+  font-size: 105%;
+}
+
+.panel h4{
+  text-align: left;
+  font-size: 90%;
+  font-weight: 100;
+}
+
+.panel-header{
+  border-top: 2px #3D405B solid;
+  border-bottom: 2px #3D405B solid;
+  padding: 1.5% 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.panel-header:first-child{
+  border-top: none;
+}
+
+.panel li:last-child{
+  padding-bottom: 1.5%;
+}
+
+.plus-sign1, .plus-sign2, .plus-sign3{
+  font-size: 150%;
+}
+
+.education li, .skills li{
+  padding-bottom: 1.5%;
+  border-bottom: 2px #3D405B solid;
+}
+
+.education li:last-child, .skills li:last-child{
+  padding-bottom: 0%;
+  border-bottom: none
 }
 
 /* index (main page) formatting */
@@ -324,4 +374,23 @@ form{
   content: "\2796";
   color: white;
   color: inherit;
+} */
+
+/*
+.bottom-border, .education li, .skills li{
+  padding-bottom: 1%;
+  border-bottom: #3D405B 3px solid;
+}
+
+.education li:last-child, .skills li:last-child{
+  border-bottom: none;
+} */
+
+/* .panel h3{
+  line-height: 1.25em;
+  border-top: red 2px solid;
+} */
+
+/* .panel h3:first-child{
+  padding-top: 0%;
 } */
