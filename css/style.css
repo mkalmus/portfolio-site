@@ -3,6 +3,7 @@
 .container{
 	display: flex;
 	flex-direction: column;
+  height: 100vh;
 }
 
 .box{
@@ -22,16 +23,15 @@
 
 .nav-box {
   background-color: #3D405B;
-  padding: 1% 0;
-  /* min-height: 5vh; */
+  padding: 0;
   border-bottom: 5px #292B3D solid;
+  padding: 1% 0;
 }
 
 .main-box {
   background-color: #eeb9aac0;
   flex: 1;
   justify-content: flex-start;
-  min-height: 73vh;
   padding: 2% 5%;
 }
 
@@ -64,59 +64,76 @@
   }
 
 /* resume page styling */
-h1 {
-  font-size: 200%;
-}
 
-h3 {
-  display: block;
-  text-align: center;
-  font-weight: 25;
-  font-size: 105%;
-}
-h3 strong {
-  display: block;
-  font-size: 100%;
-  padding-top: 0.75em;
-}
+  /* resume text */
+  h1 {
+    font-size: 175%;
+  }
 
-.education, .skills, .experience{
-  padding-top: 2%;
-}
+  h2{
+    font-size: 150%;
+  }
 
-.experience *, .education *, .skills *{
-  line-height: 1.2em;
-  text-align: left;
-}
+  h3 {
+    display: block;
+    text-align: center;
+    font-weight: 25;
+    font-size: 105%;
+  }
+  h3 strong {
+    display: block;
+    font-size: 110%;
+  }
 
-.education li, .skills li, 
-.experience ul, .experience h3{
-  display: flex;
-  flex-direction: column;
-}
+  .experience li, .skills li, .education li{
+    text-align: left;
+    font-size: 90%;
+  }
 
-.experience li, .skills li, .education li{
-  text-align: left;
-  padding-top: 0.75em;
-  font-size: 90%;
-}
-
-h2, .experience h2,
-.education h2, .skills h2 {
-  font-weight: 500;
-  font-size: 150%;
+.accordion {
   background-color: #3D405B;
   color: white;
-  margin-top: 1%;
-  text-align: center;
-  padding: .5% 0;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: all 0.2s;
+  text-align: left;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion p{
+  font-size: 175%;
+}
+
+.panel h2, .panel h3{
+  text-align: left;
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.panel-content{
+  padding: 5%;
 }
 
 /* index (main page) formatting */
 .grid-container{
   display: grid;
   justify-items: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   row-gap: 0.5em;
   column-gap: 0.5em;
   border: 7px #3D405B solid;
@@ -242,6 +259,8 @@ i{
   top: 10px;
 }
 
+
+/* contact form styling */
 form{
   display: flex;
   flex-direction: column;
@@ -249,16 +268,9 @@ form{
   align-self: center;
 }
 
-button{
-  width: 50%;
-  align-self: center;
-}
-
 *{
   font-family: 'Montserrat', sans-serif;
 }
-
-
 
 @media screen and (min-width: 850px){
 
@@ -273,3 +285,43 @@ button{
   }
 
 }
+
+/* .education li, .skills li, 
+.experience ul, .experience h3{
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .experience *, .education *, .skills *{
+  line-height: 1.2em;
+  text-align: left;
+} */
+
+/* h2, .experience h2,
+.education h2, .skills h2 {
+  font-weight: 500;
+  font-size: 150%;
+  color: #3D405B;
+  margin-top: 1%;
+  text-align: center;
+  padding: .5% 0;
+} */
+
+/* .education, .skills, .experience{
+  padding-top: 2%;
+} */
+
+/* .accordion::before {
+  content: "\02795";
+  font-size: 100%;
+  align-self: right;
+  background-color: #fff;
+  color: red;
+  color: inherit;
+}
+
+.accordion.active::before {
+  content: "\2796";
+  color: white;
+  color: inherit;
+} */
