@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
     <title>Contact</title>
   </head>
   <body>
@@ -28,13 +27,33 @@
 
       <main class="box main-box index-main">
         <h1 id="main-content">Contact Me</h1>
-        <form onsubmit="return false">
-            <input type="text" placeholder="Enter your first name" id="firstName"/>
-            <input type="text" placeholder="Enter your last name" id="lastName"/>
-            <input type="text" placeholder="Enter your email" id="email"/>
-            <input type="text" placeholder="Enter a message" id="message"/>
-            <button onclick="sendContact();">Submit Form</button>
-        </form>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Open Contact Form</button>
+
+        <div id="id01" class="modal">
+
+          <form class="modal-content animate" action="https://formspree.io/f/xjvjvayg" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="form-container">
+              <label><b>Full Name</b></label>
+              <input type="text" placeholder="John Appleseed" name="fullname" required>
+
+              <label><b>Email Address</b></label>
+              <input type="text" placeholder="johnappleseed@gmail.com" name="emailaddress" required>
+
+              <label><b>Message</b></label>
+              <input type="text" placeholder="Type your message here" name="message" required>
+
+              <button type="submit">Submit</button>
+            </div>
+
+            <div class="cancel-form">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
 
       </main>
 
@@ -42,6 +61,18 @@
         <p> &copy; Michael Kalmus, 2021 </p>
       </footer>
     </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
 
   </body>
 </html>
