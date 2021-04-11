@@ -157,15 +157,15 @@
 
   /* text inside accordions */
   .panel {
-    background: rgb(5,111,133);
-    border: linear-gradient(0deg, rgba(5,111,133,1) 0%, rgba(7,157,187,1) 100%);
+    color: black;
+    background: lightgrey;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
 
   .panel-content{
-    color: white;
+    color: black;
     padding: 2% 5% 5% 5%;
     display: flex;
     flex-direction: column;
