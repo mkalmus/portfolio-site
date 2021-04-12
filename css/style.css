@@ -619,9 +619,7 @@ img.avatar {
 
 .content-container{
   display: flex;
-  /* justify-content: center;
-  align-items:inherit;
-  align-items: flex-start; */
+  /* align-items: flex-start; */
   flex: 2;
   flex-wrap: wrap;
   padding: 2% 3%;
@@ -654,7 +652,8 @@ img.avatar {
   display: none;
 }
 
-@media screen and (min-width: 850px){
+/* tablet once viewport gets > 768 px */
+@media screen and (min-width: 768px){
 
   .nav-box{
     min-height: 5vh;
@@ -673,5 +672,11 @@ img.avatar {
   .image-hidden{
     display: inline-block;
   }
+
+}
+
+/* desktop once viewport gets > 992px */
+@media screen and (min-width: 992px){
+
 
 }
