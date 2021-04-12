@@ -110,7 +110,7 @@
 
 
 
-/* WORK PAGE */
+/* RESUME PAGE */
 
   /* accordion overall */
   .accordion {
@@ -125,15 +125,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2%;
+    padding: 10px;
   }
 
-#button2, #button3{
-  margin-top: 2%;
-}
-
-
-.experience li, .skills h4, .education li{
+.experience li, .skills h4, .education li, .skills li{
     text-align: left;
     font-size: 90%;
   }
@@ -166,14 +161,33 @@
 
   .panel-content{
     color: black;
-    padding: 2% 5% 5% 5%;
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding: 1% 2%;
   }
 
-  .panel li{
-    padding-top: 2%;
+  .education li{
+    padding-bottom: 1%;
+    padding-top: 1%;
+  }
+
+  .education li:nth-child(1){
+    padding-top: 0;
+  }
+
+  .skills li{
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .skills h3{
+    font-size: 105%;
+    padding-top: 1%;
+  }
+
+  .skills h3:nth-child(1){
+    padding-top: 0;
   }
 
   /* panel headers */
@@ -187,7 +201,6 @@
 
   h3 {
     display: block;
-    text-align: center;
     font-weight: 25;
     font-size: 105%;
   }
@@ -201,18 +214,14 @@
   .panel-header{
     border-top: 2px #3D405B solid;
     border-bottom: 2px #3D405B solid;
-    padding: 1.5% 0;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 1% 0;
   }
 
   .panel-header:first-child{
     border-top: none;
-  }
-
-  .panel li:last-child{
-    padding-bottom: 1.5%;
   }
 
   .plus-sign1, .plus-sign2, .plus-sign3{
@@ -220,7 +229,6 @@
   }
 
   .education li{
-    padding-bottom: 1.5%;
     border-bottom: 2px #3D405B solid;
   }
 
@@ -234,21 +242,33 @@
   }
 
   .skills li{
-    text-align: center;
-  }
-
-  .skills h3{
-    padding-top: 2%;
-  }
-
-  .skills h3:nth-child(1){
-    padding-top: 0;
+    text-align: left;
   }
 
   .skills ul:last-child{
     border-bottom: none;
+    padding-bottom: 0;
   }
 
+  #button2{
+    margin-top: 10px;
+  }
+
+  #button3{
+    margin-top: 10px;
+  }
+
+  .skills .no-bottom-padding{
+    padding-bottom: 0;
+  }
+
+  .experience li{
+    padding-top: 1%;
+  }
+
+  .experience li:last-child{
+    padding-bottom: 1%;
+  }
 
 
 
@@ -574,6 +594,10 @@ img.avatar {
   padding: 2% 3%;
 }
 
+.content-container p{
+  justify-items: flex-start;
+}
+
 .resume-content{
   flex-direction: column;
 }
@@ -593,6 +617,10 @@ img.avatar {
   font-family: 'Montserrat', sans-serif;
 }
 
+.image-hidden{
+  display: none;
+}
+
 @media screen and (min-width: 850px){
 
   .nav-box{
@@ -603,6 +631,14 @@ img.avatar {
   .nav_links{
     display: flex;
     justify-content: space-between;
+  }
+
+  .grid-container{
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .image-hidden{
+    display: inline-block;
   }
 
 }
