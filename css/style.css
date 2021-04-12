@@ -250,6 +250,10 @@
     padding-bottom: 0;
   }
 
+  #button1{
+    margin-top: 0;
+  }
+  
   #button2{
     margin-top: 10px;
   }
@@ -430,6 +434,12 @@ i{
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
+  margin-top: -2%;
+}
+
+.left-text p{
+  align-self: flex-start;
+  text-align: left;
 }
 
 .flip-card-container{
