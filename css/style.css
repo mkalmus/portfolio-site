@@ -24,7 +24,7 @@
     background-repeat: no-repeat; /* Parallax effect */
     background-size: cover;       /* Parallax effect */
     color: white;
-    background-image: url('https://github.com/mkalmus/portfolio-site/blob/main/images/background-image-sand.jpg');
+    background-image: url('https://github.com/mkalmus/portfolio-site/blob/main/images/background-image-sand.jpg?raw=true');
     /* background image source - Photo by Adrien Olichon from Pexels
     https://www.pexels.com/photo/black-sand-dunes-2387793/ */
   }
