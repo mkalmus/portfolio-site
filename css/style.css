@@ -19,6 +19,14 @@
   .nav-box {
     background-color: #131114;
     padding: 1% 0;
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    background-image: url('/images/background-image-sand.jpg');
+    /* background image source - Photo by Adrien Olichon from Pexels
+    https://www.pexels.com/photo/black-sand-dunes-2387793/ */
   }
 
   .footer-box {
@@ -240,6 +248,12 @@
 
   #button1{
     margin-top: 0;
+  }
+
+  #button1:focus,
+  #button2:focus,
+  #button3:focus{
+    border: white 2px solid;
   }
   
   #button2{
@@ -566,8 +580,25 @@ button:hover {
   flex-direction: column;
 }
 
+div.item-middle{
+  overflow: scroll;
+  width: 90%;
+}
 
+.flip-card-back .item-middle p{
+  text-align: left;
+  padding: 0.5em 0;
+}
 
+.flip-card-back .item-middle p:nth-child(1){
+  padding-top: 0;
+}
+
+.experience,
+.education,
+.skills{
+  width: 100%;
+}
 
 
 
