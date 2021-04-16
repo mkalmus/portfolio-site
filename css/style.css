@@ -1,16 +1,3 @@
-/* comment for testing git */
-
-/* all page styling for full page flex */
-
-
-/* COLOR PALETTE */
-
-/* #131114
-#a040c0
-#7387b3
-#8895b8
-#c2b6c5 */
-
 /* ALL PAGES */
 
   .container{
@@ -203,7 +190,6 @@
 
   h3 {
     display: block;
-    font-weight: 25;
     font-size: 105%;
   }
 
@@ -300,7 +286,7 @@
 
 .index-main p{
   text-align: left;
-  padding-top: 2%;
+  padding-top: 10px;
 }
 
 .index-main p:nth-child(1){
@@ -308,7 +294,7 @@
 }
 
 .index-main p:nth-child(4){
-  padding-bottom: 2%;
+  padding-bottom: 10px;
 }
 
 .index-main img{
@@ -327,33 +313,66 @@
 
 /* PROJECT PAGE */
 
-.project-item{
-  display: flex;
-  flex-direction: column;
-  border: 3px #3d5a80 solid;
-  border-radius: 3px;
-  width: 26vh;
-  min-height: 30vh;
-  background-color: #3D405B;
-  color: #F4F1DE;
-  margin: 2%;
-}
-
-.grow {
+/* .grow {
   transition: all .2s ease-in-out;
   }
 
 .grow:hover {
 transform: scale(1.1);
+} */
+
+
+.flip-card-container{
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 225px;
 }
 
-.item-top{
-  padding: 5%;
-  border-bottom: 3px #3d5a80 solid;
-  min-height: 5vh;
+.flip-card-container:hover .flip-card{
+  transform: rotateY(180deg);
+}
+
+.flip-card{
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  color: #F4F1DE;
+  height: 100%;
+}
+
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-radius: 2%;
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card-front{
+  background: #3f2647b9;
+  color: #F4F1DE;
+}
+
+.flip-card-back{
+  background-color: lightblue;
+  color: black;
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+}
+
+.item-top{
+  border-bottom: 3px #3d5a80 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .project-item h1{
@@ -362,12 +381,10 @@ transform: scale(1.1);
 
 .item-middle{
   flex: 1;
-  min-height: 10vh;
-  border-bottom: 3px #3d5a80 solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3%;
+  width: 100%;
 }
 
 .item-middle img{
@@ -375,47 +392,73 @@ transform: scale(1.1);
   height: 2.5em;
 }
 
-.item-middle p{
-  padding: 2% 0;
-}
-
-.project-item p{
-  font-size: 110%;
-}
-
-.item-middle p.lang-text{
-  font-size: 100%;
-}
-
 .item-bottom{
-  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  border-top: 3px #3d5a80 solid;
 }
 
-.item-bottom a{
+.flip-card-front .item-bottom a{
   color: #F4F1DE;
   text-decoration: none;
 }
 
-.item-bottom a:hover{
+.flip-card-front .item-bottom a:hover{
   text-decoration: underline;
 }
 
-.item-bottom a:visited{
+.flip-card-back .item-bottom a{
+  color: black;
+  text-decoration: none;
+}
+
+.flip-card-back .item-bottom a:hover{
+  text-decoration: underline;
+}
+
+.flip-card-front .item-bottom a:visited{
   color: #F4F1DE;
 }
 
-.icon-container{
-  padding: 3% 0;
+.flip-card-back .item-bottom a:visited{
+  color: black;
 }
 
 i{
   color: #e07b5f91;
   font-size: 250%;
-  padding: 0 5%;
+  padding: 0 3%;
 }
+
+#project-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-top h2, .item-middle, .item-bottom a{
+  padding: 5%;
+}
+
+#card1, #card2{
+  padding-bottom: 6%;
+}
+
+#card2{
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.icon-container{
+  padding: 5% 0;
+}
+
+
+
+
 
 
 
@@ -432,87 +475,21 @@ i{
   flex-direction: column;
 }
 
-.project-container{
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  margin-top: -2%;
-}
-
 .left-text p{
   align-self: flex-start;
   text-align: left;
 }
 
-.flip-card-container{
-  width: 30vw;
-  height: 65vh;
-  perspective: 1000px;
-}
-
-.flip-card-container:hover .flip-card{
-  transform: rotateY(180deg);
-}
-
-.flip-card{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-front, .flip-card-back{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2%;
-}
-
-.flip-card-front{
-  background: #a040c0;
-  color: #F4F1DE;
-}
-
-.flip-card-back{
-  background-color: lightblue;
-  transform: rotateY(180deg);
-  justify-content: flex-start;
-}
-
-.flip-card-back h2{
-  padding-top: 10%;
-}
-
-.flip-card-back p{
-  padding-top: 10%;
-}
-
-
-
-
-
-
-
-
-
-
-
 /* CONTACT FORM */
 
 /* Full-width input fields */
 input[type=text]{
-  width: 100%;
-  padding: 5% 2%;
-  margin: 8px 0;
+  width: 90%;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  padding: 2%;
+  margin: 10px 0;
 }
 
 /* Set a style for all buttons */
@@ -521,9 +498,10 @@ button {
   color: #F4F1DE;
   border: none;
   cursor: pointer;
-  width: 100%;
-  padding: 4% 0;
+  width: 80%;
+  padding: 2%;
   margin-top: 3%;
+  margin-bottom: 5%;
 }
 
 button:hover {
@@ -532,99 +510,52 @@ button:hover {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-  margin: 0;
-  padding: 0;
   width: auto;
-  padding: 0 2%;
-  background-color: #f44336;
+  background-color: #c22a1f;
+  margin: 2%;
 }
 
 .cancel-form{
   background-color: #7075a3;
-  height: 5vh;
   display: flex;
   justify-content: center;
-  padding: 3%;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+.cluster{
+  width: 100%;
 }
 
 .form-container {
-  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+  padding-top: 5%;
+  height: 325px;
 }
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   color: black;
+  height: 100%;
+  width: 100%;
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 10px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-#contactbutton{
-  padding: 3% 5%;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%;
 }
 
 .content-container{
   display: flex;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   flex: 2;
   flex-wrap: wrap;
-  padding: 2% 3%;
+  padding: 3vh 8vw;
 }
 
 .content-container p{
@@ -634,6 +565,22 @@ img.avatar {
 .resume-content{
   flex-direction: column;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {

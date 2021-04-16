@@ -41,33 +41,39 @@
           to reach out about anything at all, please use the button below to contact me (form 
           processed with FormSpree)!
         </p>
-          <button class="contact-button" id="contactbutton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Open Contact Form</button>
 
         <div id="id01" class="modal">
 
-          <form class="modal-content animate" action="https://formspree.io/f/xjvjvayg" method="post">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            </div>
+          <form class="modal-content" action="https://formspree.io/f/xjvjvayg" method="post">
 
             <div class="form-container">
-              <label><b>Full Name</b></label>
-              <input type="text" placeholder="John Appleseed" name="fullname" required>
 
-              <label><b>Email Address</b></label>
-              <input type="text" placeholder="johnappleseed@gmail.com" name="emailaddress" required>
+              <div class="cluster">
+              <label for="name"><b>Full Name</b></label>
+              <input id="name" type="text" placeholder="John Appleseed" name="fullname" required>
+              </div>
 
-              <label><b>Message</b></label>
-              <input type="text" placeholder="Type your message here" name="message" required>
+              <div class="cluster">
+              <label for="email"><b>Email Address</b></label>
+              <input id="email" type="text" placeholder="johnappleseed@gmail.com" name="emailaddress" required>
+              </div>
 
+              <div class="cluster">
+              <label for="message"><b>Message</b></label>
+              <input id="message" type="text" class="big-message" placeholder="Type your message here" name="message" required>
+              </div>
+
+              <div class="cluster">
               <button type="submit">Submit</button>
+              </div>
             </div>
 
             <div class="cancel-form">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" onclick="location.href='contact.html';" class="cancelbtn">Reset Form</button>
             </div>
           </form>
         </div>
+
       </div>
 
       </main>
@@ -76,18 +82,6 @@
         <p> &copy; Michael Kalmus, 2021 </p>
       </footer>
     </div>
-
-    <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-      </script>
 
   </body>
 </html>
