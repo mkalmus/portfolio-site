@@ -7,6 +7,14 @@ body{
   background-color: #131114f1;
 }
 
+p, label{
+  font-size: 20px;
+}
+
+h1{
+  font-size: 35px;
+}
+
 nav, h1, footer, main{
   display: flex;
   flex-direction: column;
@@ -19,6 +27,7 @@ nav, h1, footer, main{
 
 nav li{
   padding: 5%;
+  font-size: 18px;
 }
 
 nav a{
@@ -44,7 +53,7 @@ main{
   justify-content: flex-start;
   align-items: baseline;
   text-align: left;
-  padding: 3% 5%;
+  padding: 5%;
   background-color: #131114f1;
 }
 
@@ -56,6 +65,10 @@ main p{
 
 main p:first-child{
   padding-top: 0;
+}
+
+.last-item{
+  padding-bottom: 5%;
 }
 
 nav{
@@ -71,7 +84,6 @@ nav{
 }
 
 h1{
-  font-size: 2em;
   background: rgb(160,64,192);
   background: linear-gradient(90deg, rgba(160,64,192,1) 0%, rgba(5,108,129,1) 100%);
   border-bottom: 2px #a040c0 solid;
@@ -80,7 +92,7 @@ h1{
 
 footer{
   background-color: #131114;
-  padding: 1% 0;
+  padding: 2% 0;
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
@@ -91,8 +103,17 @@ footer{
   https://www.pexels.com/photo/black-sand-dunes-2387793/ */
 }
 
+/* FONT SIZES */
 a{
   text-decoration: none;
+}
+
+.panel li{
+  font-size: 16px;
+}
+
+.panel h3, .panel h4{
+  font-size: 18px;
 }
 
 
@@ -177,8 +198,12 @@ a{
     }
 
     .experience li{
-      padding-top: 2%;
+      padding: 2% 0;
       list-style-type: none;
+    }
+
+    .experience li:first-child{
+      padding-bottom: 0;
     }
 
     .education h3, .skills h3{
@@ -217,8 +242,8 @@ transform: scale(1.1);
 
 .flip-card-container{
   perspective: 1000px;
-  width: 200px;
-  height: 275px;
+  width: 260px;
+  height: 300px;
 }
 
 .flip-card-container:hover .flip-card,
@@ -298,6 +323,10 @@ i{
   padding: 5% 0;
 }
 
+.item-bottom p, .item-top h2{
+  padding: 0;
+}
+
 .flip-card-back{
   background-color: lightblue;
   color: black;
@@ -326,6 +355,19 @@ i{
 .flip-card-back .item-middle p{
   text-align: left;
   padding: 2% 5%;
+  font-size: 16px;
+}
+
+.item-top h2{
+  font-size: 24px;
+}
+
+.item-middle p{
+  font-size: 20px;
+}
+
+.item-bottom p{
+  font-size: 16px;
 }
 
 .flip-card-back .item-middle p:first-child{
@@ -346,7 +388,6 @@ i{
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  margin-top: 1%;
 }
 
 #card2{
@@ -387,7 +428,8 @@ input[type=text]{
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px;
+  font-size: 16px;
 }
 
 .modal-content .upper{
@@ -406,8 +448,10 @@ input[type=text]{
   color: #F4F1DE;
   border: none;
   cursor: pointer;
-  width: 50%;
-  padding: 7px;
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 0;
+  margin: 3%;
 }
 
 .modal-content button:hover {
@@ -417,12 +461,12 @@ input[type=text]{
 .modal-content .cancelbtn {
   width: auto;
   background-color: #c22a1f;
-  padding: 7px;
+  padding: 3%;
+  margin: 3% 0;
 }
 
 .modal-content .cancel-form{
   background-color: #7075a3;
-  height: 6vh;
   width: 100%;
   display: flex;
   flex-direction: column;
