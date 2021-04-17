@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo.png" type=image/png>
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/18e19a4bc7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,70 +18,59 @@
 
       gtag('config', 'G-P2Y428NZ2E');
     </script>
-    <title>Contact</title>
-  </head>
-  <body>
-    <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
-    <div class="container">
-      <header>
-        <nav class="box nav-box">
-          <ul class="nav_links">
-            <li class="nav_item"><a href="index.html">About</a></li>
-            <li class="nav_item"><a href="resume.html">Experience</a></li>
-            <li class="nav_item"><a href="projects.html">Projects</a></li>
-            <li class="nav_item"><a id="main" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+    <title>Projects</title>
+</head>
+<body>
 
-      <main class="box main-box index-main">
-        <h1>Contact Me</h1>
-        <div id="main-content" class="content-container center-container left-text">
-        <p>Thanks for taking the time to view my website! If you have any feedback or would like
-          to reach out about anything at all, please use the button below to contact me (form 
-          processed with FormSpree)!
-        </p>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a id="main" href="contact.html">Contact</a></li>
+                  </ul>
+            </nav>
 
-        <div id="id01" class="modal">
+            <h1>Michael Kalmus</h1>
 
-          <form class="modal-content" action="https://formspree.io/f/xjvjvayg" method="post">
+        </header>
 
-            <div class="form-container">
+        <main>
+            <p>Thanks for taking the time to view my website! If you have any feedback or would like
+                to reach out about anything at all, please use the button below to contact me (form 
+                processed with FormSpree)!
+            </p>
+      
+            <div class="modal">
+                <form class="modal-content" action="https://formspree.io/f/xjvjvayg" method="post">
+      
+                    <div class="upper">
+                        <label for="name"><b>Full Name</b></label>
+                        <input id="name" type="text" placeholder="John Appleseed" name="fullname" required>
 
-              <div class="cluster">
-              <label for="name"><b>Full Name</b></label>
-              <input id="name" type="text" placeholder="John Appleseed" name="fullname" required>
-              </div>
+                        <label for="email"><b>Email Address</b></label>
+                        <input id="email" type="text" placeholder="johnappleseed@gmail.com" name="emailaddress" required>
+        
+                        <label for="message"><b>Message</b></label>
+                        <input id="message" type="text" class="big-message" placeholder="Type your message here" name="message" required>
+        
+                        <button type="submit">Submit</button>
 
-              <div class="cluster">
-              <label for="email"><b>Email Address</b></label>
-              <input id="email" type="text" placeholder="johnappleseed@gmail.com" name="emailaddress" required>
-              </div>
+                    </div>
 
-              <div class="cluster">
-              <label for="message"><b>Message</b></label>
-              <input id="message" type="text" class="big-message" placeholder="Type your message here" name="message" required>
-              </div>
+                    <div class="cancel-form">
+                        <button type="button" onclick="location.href='contact.html';" class="cancelbtn">Reset Form</button>
+                    </div>
 
-              <div class="cluster">
-              <button type="submit">Submit</button>
-              </div>
+                </form>
             </div>
+      
+        </main>
 
-            <div class="cancel-form">
-              <button type="button" onclick="location.href='contact.html';" class="cancelbtn">Reset Form</button>
-            </div>
-          </form>
-        </div>
+        <footer>
+            <p> &copy; Michael Kalmus, 2021 </p>
+        </footer>
 
-      </div>
-
-      </main>
-
-      <footer class="box footer-box">
-        <p> &copy; Michael Kalmus, 2021 </p>
-      </footer>
-    </div>
-
-  </body>
+</body>
 </html>

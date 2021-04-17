@@ -1,286 +1,99 @@
 /* ALL PAGES */
 
-  .container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #131114f1;
+}
+
+nav, h1, footer, main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1% 0;
+  color: #F4F1DE;
+}
+
+nav li{
+  padding: 5%;
+}
+
+nav a{
+  color: #F4F1DE;
+  text-decoration: none;
+}
+
+  nav a:hover{
+    text-decoration: underline;
   }
 
-  .box{
-    text-align: center;
-    color: #F4F1DE;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
+  nav a:active{
+    text-decoration: underline;
   }
 
-  .nav-box {
-    background-color: #131114;
-    padding: 1% 0;
-    background-attachment: fixed; /* Parallax effect */     
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
-    color: white;
-    background-image: url('https://github.com/mkalmus/portfolio-site/blob/main/images/background-image-sand.jpg?raw=true');
-    /* background image source - Photo by Adrien Olichon from Pexels
-    https://www.pexels.com/photo/black-sand-dunes-2387793/ */
-  }
+nav #main{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
 
-  .footer-box {
-    background-color: #131114;
-    color: #F4F1DE;
-    border-top: 2px #a040c0 solid;
-    padding: 1% 0;
-  }
+main{
+  flex: 1;
+  justify-content: flex-start;
+  align-items: baseline;
+  text-align: left;
+  padding: 3% 5%;
+  background-color: #131114f1;
+}
 
-  .main-box {
-    background-color: #131114f1;
-    flex: 1;
-    justify-content: flex-start;
-  }
+main p{
+  padding-top: 1%;
+  padding-bottom: 2%;
+  line-height: 1.25em;
+}
 
-  .main-box h1{
-    min-height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightgoldenrodyellow;
-    padding: 1% 0;
-    background: rgb(160,64,192);
-    background: linear-gradient(90deg, rgba(160,64,192,1) 0%, rgba(5,108,129,1) 100%);
-    color: #F4F1DE;
-    border-bottom: 2px #a040c0 solid;
-    border-top: 2px #a040c0 solid;
-  }
+main p:first-child{
+  padding-top: 0;
+}
 
-  .box li{
-    list-style-type: none;
-  }
+nav{
+  background-color: #131114;
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  background-image: url('https://github.com/mkalmus/portfolio-site/blob/main/images/background-image-sand.jpg?raw=true');
+  /* background image source - Photo by Adrien Olichon from Pexels
+  https://www.pexels.com/photo/black-sand-dunes-2387793/ */
+}
 
-  /* skip to main content */
-  .skip a{
-    background: #F4F1DE;
-    left: 0;
-    padding: 7px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
-    position: absolute;
-    top: -50px;
-  }
+h1{
+  font-size: 2em;
+  background: rgb(160,64,192);
+  background: linear-gradient(90deg, rgba(160,64,192,1) 0%, rgba(5,108,129,1) 100%);
+  border-bottom: 2px #a040c0 solid;
+  border-top: 2px #a040c0 solid;
+}
 
-  .skip a:focus{
-    position: absolute;
-    top: 10px;
-  }
+footer{
+  background-color: #131114;
+  padding: 1% 0;
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  background-image: url('https://github.com/mkalmus/portfolio-site/blob/main/images/background-image-sand.jpg?raw=true');
+  /* background image source - Photo by Adrien Olichon from Pexels
+  https://www.pexels.com/photo/black-sand-dunes-2387793/ */
+}
 
-  /* NAVBAR */
-    .nav_links a{
-      color: #F4F1DE;
-      text-decoration: none;
-      line-height: 1.5em;
-    }
-
-      .nav_links a:hover{
-        text-decoration: underline;
-      }
-
-      .nav_links a:active{
-        text-decoration: underline;
-      }
-
-    .nav_links #main{
-      text-decoration: underline;
-      text-transform: uppercase;
-    }
-
-
-
-
-
-
-
-
-
-
-
-/* RESUME PAGE */
-
-  /* accordion overall */
-  .accordion {
-    background: rgb(119, 47, 143);
-    color: #F4F1DE;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    outline: none;
-    transition: all 0.2s;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-.experience li, .skills h4, .education li, .skills li{
-    text-align: left;
-    font-size: 90%;
-  }
-
-  /* collapsed */
-    .accordion:hover {
-      opacity: 0.8;
-    }
-
-    .accordion:after {
-      content: "\002B";
-      font-size: 150%;
-      color: #fff;
-    }
-
-    .active:after {
-      content: "\2212";
-      font-size: 150%;
-      color: #fff;
-    }
-
-  /* text inside accordions */
-  .panel {
-    color: black;
-    background: lightgrey;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-  }
-
-  .panel-content{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 1% 2%;
-  }
-
-  .education li{
-    padding-bottom: 1%;
-    padding-top: 1%;
-  }
-
-  .education li:nth-child(1){
-    padding-top: 0;
-  }
-
-  .skills li{
-    padding-top: 0.5%;
-    padding-bottom: 1%;
-  }
-
-  .skills h3{
-    font-size: 105%;
-    padding-top: 1%;
-  }
-
-  .skills h3:nth-child(1){
-    padding-top: 0;
-  }
-
-  /* panel headers */
-  h1 {
-    font-size: 175%;
-  }
-
-  h2{
-    font-size: 125%;
-  }
-
-  h3 {
-    display: block;
-    font-size: 105%;
-  }
-
-  .panel h4{
-    text-align: left;
-    font-size: 90%;
-    font-weight: 100;
-  }
-
-  .panel-header{
-    border-top: 2px #3D405B solid;
-    border-bottom: 2px #3D405B solid;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1% 0;
-  }
-
-  .panel-header:first-child{
-    border-top: none;
-  }
-
-  .plus-sign1, .plus-sign2, .plus-sign3{
-    font-size: 150%;
-  }
-
-  .education li{
-    border-bottom: 2px #3D405B solid;
-  }
-
-  .skills ul{
-    border-bottom: 2px #3D405B solid;
-  }
-
-  .education li:last-child{
-    padding-bottom: 0%;
-    border-bottom: none
-  }
-
-  .skills li{
-    text-align: left;
-  }
-
-  .skills ul:last-child{
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  #button1{
-    margin-top: 0;
-  }
-
-  #button1:focus,
-  #button2:focus,
-  #button3:focus{
-    border: white 2px solid;
-  }
-  
-  #button2{
-    margin-top: 10px;
-  }
-
-  #button3{
-    margin-top: 10px;
-  }
-
-  .skills .no-bottom-padding{
-    padding-bottom: 0;
-  }
-
-  .experience li{
-    padding-top: 1%;
-  }
-
-  .experience li:last-child{
-    padding-bottom: 1%;
-  }
-
-
-
-
-
-
+a{
+  text-decoration: none;
+}
 
 
 /* INDEX PAGE */
@@ -288,73 +101,145 @@
   display: grid;
   padding: 7px;
   grid-template-columns: auto auto auto;
-  background-color: black;
+  background-color: lightgray;
   border-radius: 5px;
   row-gap: 7px;
   column-gap: 7px;
+  max-width: 900px;
+  align-self: center;
+}
+
+.grid-container img{
+  border-radius: 5px;
+  width: 100%;
 }
 
 .grid-item:hover{
   opacity: 0.50;
 }
 
-.index-main p{
-  text-align: left;
-  padding-top: 10px;
-}
-
-.index-main p:nth-child(1){
-  padding-top: 0;
-}
-
-.index-main p:nth-child(4){
-  padding-bottom: 10px;
-}
-
-.index-main img{
-  border-radius: 5px;
+/* RESUME PAGE */
+.experience, .education, .skills{
   width: 100%;
-  max-width: 250px;
 }
 
+.education, .skills{
+  margin-top: 3%;
+}
 
+.accordion {
+  background: rgb(119, 47, 143);
+  color: #F4F1DE;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+    .accordion:hover {
+      opacity: 0.8;
+    }
 
+    .accordion:after {
+      content: "\002B";
+      font-size: 150%;
+    }
 
+    .active:after {
+      content: "\2212";
+      font-size: 150%;
+    }
 
+  .panel {
+    color: black;
+    background: lightgrey;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+    .panel-content{
+      padding: 2% 3%;
+    }
 
+    .panel-header{
+      text-align: center;
+      padding: 1% 0;
+      border-bottom: 3px black solid;
+      border-top: 3px black solid;
+    }
+    .panel-header:first-child{
+      border-top: none;
+      padding-top: 0;
+    }
 
+    .experience li{
+      padding-top: 2%;
+      list-style-type: none;
+    }
 
+    .education h3, .skills h3{
+      padding-top: 1%;
+      border-top: 2px black solid;
+    }
+
+    .education h3:first-child, .skills h3:first-child{
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .education ul, .skills ul{
+      padding: 1% 0;
+      list-style-type: none;
+    }
+
+    .education ul:last-of-type, .skills ul:last-of-type{
+      padding-bottom: 0;
+    }
+
+  button h2{
+    font-size: 150%;
+  }
 
 /* PROJECT PAGE */
 
-/* .grow {
+.grow {
   transition: all .2s ease-in-out;
   }
 
 .grow:hover {
 transform: scale(1.1);
-} */
+}
 
 
 .flip-card-container{
   perspective: 1000px;
-  display: flex;
-  flex-direction: column;
   width: 200px;
-  height: 225px;
+  height: 275px;
 }
 
-.flip-card-container:hover .flip-card{
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card,
+.flip-card-container:active .flip-card,
+.flip-card-container:focus .flip-card {
   transform: rotateY(180deg);
 }
 
 .flip-card{
   transition: transform 1s;
   transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
   color: #F4F1DE;
   height: 100%;
+}
+
+.flip-card a:focus{
+  box-shadow: 0px 0px 4px #0066ff;
+  border-radius: 20px;
+  outline: none;
+  text-decoration: underline;
 }
 
 .flip-card-front, .flip-card-back{
@@ -367,11 +252,50 @@ transform: scale(1.1);
   border-radius: 2%;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .flip-card-front{
   background: #3f2647b9;
   color: #F4F1DE;
+}
+
+.item-top{
+  text-align: center;
+  width: 100%;
+  font-size: 125%;
+  padding: 5% 0;
+}
+
+.item-middle{
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  border-top: 3px #3d5a80 solid;
+  border-bottom: 3px #3d5a80 solid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.item-middle img{
+  width: 2.5em;
+  height: 2.5em;
+}
+
+i{
+  color: #e07b5f91;
+  font-size: 250%;
+  padding: 0 3%;
+}
+
+.item-bottom{
+  width: 100%;
+  text-align: center;
+  padding: 5% 0;
 }
 
 .flip-card-back{
@@ -381,247 +305,129 @@ transform: scale(1.1);
   justify-content: flex-start;
 }
 
-.item-top{
-  border-bottom: 3px #3d5a80 solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.project-item h1{
-  font-size: 1.5em;
-}
-
-.item-middle{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.item-middle img{
-  width: 2.5em;
-  height: 2.5em;
-}
-
-.item-bottom{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  border-top: 3px #3d5a80 solid;
-}
-
-.flip-card-front .item-bottom a{
-  color: #F4F1DE;
+.flip-card-back a{
+  color: black;
   text-decoration: none;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  padding: 2% 5%;
+  align-self: center;
 }
 
-.flip-card-front .item-bottom a:hover{
+.flip-card-back a:hover{
   text-decoration: underline;
 }
 
-.flip-card-back .item-bottom a{
+.flip-card-back a:visited{
   color: black;
-  text-decoration: none;
-}
-
-.flip-card-back .item-bottom a:hover{
-  text-decoration: underline;
-}
-
-.flip-card-front .item-bottom a:visited{
-  color: #F4F1DE;
-}
-
-.flip-card-back .item-bottom a:visited{
-  color: black;
-}
-
-i{
-  color: #e07b5f91;
-  font-size: 250%;
-  padding: 0 3%;
-}
-
-#project-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.item-top h2, .item-middle, .item-bottom a{
-  padding: 5%;
-}
-
-#card1, #card2{
-  padding-bottom: 6%;
-}
-
-#card2{
-  padding-right: 3%;
-  padding-left: 3%;
-}
-
-.icon-container{
-  padding: 5% 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* CAUSES PAGE */
-
-.center-container{
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-.left-text p{
-  align-self: flex-start;
-  text-align: left;
-}
-
-/* CONTACT FORM */
-
-/* Full-width input fields */
-input[type=text]{
-  width: 90%;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  padding: 2%;
-  margin: 10px 0;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #3D405B;
-  color: #F4F1DE;
-  border: none;
-  cursor: pointer;
-  width: 80%;
-  padding: 2%;
-  margin-top: 3%;
-  margin-bottom: 5%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  background-color: #c22a1f;
-  margin: 2%;
-}
-
-.cancel-form{
-  background-color: #7075a3;
-  display: flex;
-  justify-content: center;
-}
-
-.cluster{
-  width: 100%;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 5%;
-  padding-top: 5%;
-  height: 325px;
-}
-
-/* The Modal (background) */
-.modal {
-  overflow: auto; /* Enable scroll if needed */
-  color: black;
-  height: 100%;
-  width: 100%;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  width: 100%; /* Could be more or less, depending on screen size */
-  height: 100%;
-}
-
-.content-container{
-  display: flex;
-  align-items: flex-start;
-  flex: 2;
-  flex-wrap: wrap;
-  padding: 3vh 8vw;
-}
-
-.content-container p{
-  justify-items: flex-start;
-}
-
-.resume-content{
-  flex-direction: column;
-}
-
-div.item-middle{
-  overflow: scroll;
-  width: 90%;
 }
 
 .flip-card-back .item-middle p{
   text-align: left;
-  padding: 0.5em 0;
+  padding: 2% 5%;
 }
 
-.flip-card-back .item-middle p:nth-child(1){
+.flip-card-back .item-middle p:first-child{
   padding-top: 0;
 }
 
-.experience,
-.education,
-.skills{
+.flip-card-back .item-middle p:last-child{
+  padding-bottom: 0;
+}
+
+.flip-card-back .item-bottom{
+  margin: 2%;
+}
+
+.all-projects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+#card2{
+  margin: 0 5%;
+}
+
+#card1, #card2{
+  margin-bottom: 5%;
 }
 
 
+/* CONTACT PAGE */
 
+.modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.modal-content{
+  width: 75%;
+  max-width: 700px;
+  height: 90%;
+  background: lightgrey;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+input[type=text]{
+  width: 80%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px;
+}
 
+.modal-content .upper{
+  flex: 1;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
 
+.modal-content button {
+  background-color: #3D405B;
+  color: #F4F1DE;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  padding: 7px;
+}
 
+.modal-content button:hover {
+  opacity: 0.8;
+}
 
+.modal-content .cancelbtn {
+  width: auto;
+  background-color: #c22a1f;
+  padding: 7px;
+}
 
-
-
-
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
+.modal-content .cancel-form{
+  background-color: #7075a3;
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 *{
@@ -635,15 +441,21 @@ div.item-middle{
 /* tablet once viewport gets > 768 px */
 @media screen and (min-width: 768px){
 
-  .nav-box{
-    min-height: 5vh;
-    padding: 0 5%;
+  nav{
+    padding: .25% 0;
+  }
+  
+  nav ul{
+    padding: 0;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
   }
 
-  .nav_links{
-    display: flex;
-    justify-content: space-between;
-  }
 
   .grid-container{
     grid-template-columns: auto auto auto auto;
@@ -660,3 +472,4 @@ div.item-middle{
 
 
 }
+
