@@ -1,6 +1,13 @@
 /* ALL PAGES */
 
-.skip a{
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #131114f1;
+}
+
+body .skip a{
   background: #F4F1DE;
   left: 0;
   padding: 7px;
@@ -11,17 +18,9 @@
   top: -50px;
 }
 
-.skip a:focus{
+body .skip a:focus{
   position: absolute;
   top: 10px;
-}
-
-
-body{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #131114f1;
 }
 
 p, label{
@@ -186,6 +185,7 @@ a{
   width: 100%;
   height: 50px;
   padding: 0 10px;
+  text-align: left;
 }
     .accordion:hover {
       opacity: 0.8;
@@ -252,38 +252,32 @@ a{
     }
 
   button h2{
-    font-size: 22px;
+    font-size: 20px;
   }
 
 /* PROJECT PAGE */
 
-.grow {
-  transition: all .2s ease-in-out;
-  }
-
-.grow:hover {
-transform: scale(1.1);
+.flip-card-front{
+  display: none;
 }
-
 
 .flip-card-container{
   perspective: 1000px;
   width: 260px;
-  height: 300px;
-}
-
-.flip-card-container:hover .flip-card,
-.flip-card-container:focus-within .flip-card,
-.flip-card-container:active .flip-card,
-.flip-card-container:focus .flip-card {
-  transform: rotateY(180deg);
+  height: 350px;
 }
 
 .flip-card{
-  transition: transform 1s;
-  transform-style: preserve-3d;
   color: #F4F1DE;
   height: 100%;
+  width: 100%;
+}
+
+.item-top{
+  text-align: center;
+  width: 100%;
+  font-size: 125%;
+  padding: 5% 0;
 }
 
 .flip-card a:focus{
@@ -293,9 +287,7 @@ transform: scale(1.1);
   text-decoration: underline;
 }
 
-.flip-card-front, .flip-card-back{
-  position: absolute;
-  backface-visibility: hidden;
+.flip-card-back{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,20 +295,7 @@ transform: scale(1.1);
   border-radius: 2%;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
   overflow-x: hidden;
-}
-
-.flip-card-front{
-  background: #3f2647b9;
-  color: #F4F1DE;
-}
-
-.item-top{
-  text-align: center;
-  width: 100%;
-  font-size: 125%;
-  padding: 5% 0;
 }
 
 .item-middle{
@@ -330,6 +309,7 @@ transform: scale(1.1);
   text-align: center;
   justify-content: space-between;
   padding: 5%;
+  overflow: scroll;
 }
 
 .item-middle img{
@@ -356,7 +336,6 @@ i{
 .flip-card-back{
   background-color: lightblue;
   color: black;
-  transform: rotateY(180deg);
   justify-content: flex-start;
 }
 
@@ -430,6 +409,7 @@ i{
 }
 
 
+
 /* CONTACT PAGE */
 
 .modal{
@@ -442,16 +422,14 @@ i{
 }
 
 .modal-content{
-  width: 75%;
-  max-width: 700px;
-  height: 90%;
   background: lightgrey;
   color: black;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  width: 90%;
+  height: 100%;
 }
 
 input[type=text]{
@@ -459,8 +437,9 @@ input[type=text]{
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  padding: 15px;
   font-size: 16px;
+  padding: 1vh;
+  overflow-x: scroll;
 }
 
 .modal-content .upper{
@@ -480,9 +459,8 @@ input[type=text]{
   border: none;
   cursor: pointer;
   width: 80%;
-  padding: 15px;
-  margin-bottom: 0;
-  margin: 3%;
+  padding: .75vh;
+  margin-top: 1vh;
 }
 
 .modal-content button:hover {
@@ -541,6 +519,51 @@ input[type=text]{
 
 /* desktop once viewport gets > 992px */
 @media screen and (min-width: 992px){
+  .grow {
+    transition: all .2s ease-in-out;
+    }
+  
+  .grow:hover {
+  transform: scale(1.1);
+  }
+  
+  .flip-card-container:hover .flip-card,
+  .flip-card-container:focus-within .flip-card,
+  .flip-card-container:active .flip-card,
+  .flip-card-container:focus .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card{
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    color: #F4F1DE;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .flip-card-front{
+    background: #3f2647b9;
+    color: #F4F1DE;
+  }
+
+  .flip-card-back{
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back{
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
 
 
 }
