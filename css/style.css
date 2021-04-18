@@ -1,5 +1,22 @@
 /* ALL PAGES */
 
+.skip a{
+  background: #F4F1DE;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+}
+
+.skip a:focus{
+  position: absolute;
+  top: 10px;
+}
+
+
 body{
   display: flex;
   flex-direction: column;
@@ -130,7 +147,7 @@ a{
   display: grid;
   padding: 7px;
   grid-template-columns: auto auto auto;
-  background-color: lightgray;
+  background-color: white;
   border-radius: 5px;
   row-gap: 7px;
   column-gap: 7px;
@@ -512,9 +529,6 @@ input[type=text]{
       width: 100%;
     }
 
-    nav li{
-      /* font-size: 26px; */
-    }
 
   .grid-container{
     grid-template-columns: auto auto auto auto;
