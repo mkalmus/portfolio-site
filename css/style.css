@@ -306,14 +306,18 @@ a{
   flex: 1;
   height: 100%;
   width: 100%;
-  border-top: 3px #3d5a80 solid;
-  border-bottom: 3px #3d5a80 solid;
+  border-top: 5px rgba(55, 16, 68, 0.808) solid;
+  border-bottom: 5px rgba(55, 16, 68, 0.808) solid;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   padding: 5%;
   overflow: scroll;
+}
+
+.flip-card-back .item-top, .flip-card-back .item-bottom, .flip-card-back{
+  background-color: rgb(3, 75, 90);
 }
 
 .item-middle img{
@@ -338,19 +342,20 @@ i{
 }
 
 .flip-card-back{
-  background-color: lightblue;
-  color: black;
+  color: white;
   justify-content: flex-start;
 }
 
 .flip-card-back a{
-  color: black;
+  color: white;
   text-decoration: none;
-  background-color: white;
+  background-color: rgba(160,64,192,1);
+  background: linear-gradient(-90deg, rgba(160,64,192,1) 0%, rgba(5,108,129,1) 100%);
   border-radius: 20px;
   width: 100%;
-  padding: 2% 5%;
+  padding: .5vh 2vh;
   align-self: center;
+  border: black 3px solid;
 }
 
 .flip-card-back a:hover{
@@ -358,7 +363,7 @@ i{
 }
 
 .flip-card-back a:visited{
-  color: black;
+  color: white;
 }
 
 .flip-card-back .item-middle p{
@@ -411,7 +416,6 @@ i{
 .flip-card-front p{
   padding: 0;
 }
-
 
 
 /* CONTACT PAGE */
@@ -547,8 +551,13 @@ input[type=text]{
   }
   
   .flip-card-front{
-    background: #3f2647b9;
+    background: rgba(55, 16, 68, 0.808);
     color: #F4F1DE;
+  }
+
+  .flip-card-front .item-middle{
+    border-top: rgb(3, 75, 90) 5px solid;
+    border-bottom: rgb(3, 75, 90) 5px solid;
   }
 
   .flip-card-back{
@@ -588,4 +597,92 @@ input[type=text]{
     background-attachment: initial;
   }
 }
+
+@media print{
+  html{
+    height: 100vh;
+  }
+
+  body{
+    height: 80vh;
+  }
+
+  .grid-container{
+    grid-template-columns: auto auto auto auto;
+  }
+    .image-hidden{
+      display: inline-block;
+    }
+  
+  .grid-container img{
+    width: 100px;
+  }
+  
+  p{
+    font-size: 16px;
+  }
+
+  nav{
+    padding: .5vh 3vw;
+  }
+    nav ul{
+      padding: 0;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+  body{
+    height: 100vh;
+  }
+
+  .flip-card-container{
+    width: 200px;
+    height: 590px;
+  }
+  
+  .flip-card .flip-card-back .item-middle{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .panel{
+    max-height: 100vh;
+  }
+  
+  .panel-content li{
+    font-size: 10px;
+  }
+  
+  .education h3, .education h4,
+  .skills h3, .skills h4,
+  .experience h3, .experience h4{
+    font-size: 10px;
+  }
+
+  .pagebreak{
+    clear: both;
+    break-before: always;
+    border: red 5px solid;
+  }
+
+  #button2{
+    margin-top: 145px;
+  }
+
+  body, main{
+    background-color: black;
+  }
+
+  .accordion:after {
+    content: "\2212";
+    font-size: 36px;
+  }
+
+}
+
 
