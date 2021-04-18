@@ -1,4 +1,8 @@
 /* ALL PAGES */
+html{
+  scroll-behavior: smooth;
+}
+
 
 body{
   display: flex;
@@ -566,5 +570,22 @@ input[type=text]{
   
 
 
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  body .skip a, .panel, .flip-card{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  nav, footer{
+    background-attachment: initial;
+  }
 }
 
