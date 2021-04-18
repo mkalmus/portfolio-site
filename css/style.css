@@ -445,8 +445,8 @@ input[type=text]{
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-size: 16px;
-  padding: 1vh;
+  font-size: 18px;
+  padding: 2vh;
   overflow-x: scroll;
 }
 
@@ -467,8 +467,8 @@ input[type=text]{
   border: none;
   cursor: pointer;
   width: 80%;
-  padding: .75vh;
-  margin-top: 1vh;
+  padding: 2vh;
+  font-size: 18px;
 }
 
 .modal-content button:hover {
@@ -478,8 +478,6 @@ input[type=text]{
 .modal-content .cancelbtn {
   width: auto;
   background-color: #c22a1f;
-  padding: 3%;
-  margin: 3% 0;
 }
 
 .modal-content .cancel-form{
@@ -489,6 +487,7 @@ input[type=text]{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 8vh;
 }
 
 *{
@@ -637,17 +636,6 @@ input[type=text]{
 
   body{
     height: 100vh;
-  }
-
-  .flip-card-container{
-    width: 200px;
-    height: 590px;
-  }
-  
-  .flip-card .flip-card-back .item-middle{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
   }
 
   .panel{
