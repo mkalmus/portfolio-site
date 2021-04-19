@@ -595,6 +595,14 @@ input[type=text]{
   nav, footer{
     background-attachment: initial;
   }
+  .grow {
+    transition: none;
+    }
+  
+  .grow:hover {
+  transform: none;
+  }
+
 }
 
 @media print{
