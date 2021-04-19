@@ -205,6 +205,10 @@ a{
       font-size: 36px;
     }
 
+    .accordion:focus{
+      outline: white 2px solid;
+    }
+
   .panel {
     color: black;
     background: lightgrey;
